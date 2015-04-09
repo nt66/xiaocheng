@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>reg</title>
+	<link rel="stylesheet" type="text/css" href="css/reg.css">
+	<link rel="stylesheet" type="text/css" href="css/reg2.css">
+
+</head>
+<body id="body" class="wrapper">
+	<div id="top" style="padding: 20px 0 0 0;">
+		<img src="//ssl.vanclimg.com/login/logo.gif" alt="凡客诚品" title="凡客诚品" onclick="javascript:window.location.href='http://www.vancl.com'" style="cursor:pointer"></div>
+	<!--logo-->
+
+	<form method="post" action="reg.aspx" id="myform">
+		<div class="aspNetHidden">
+			<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNDM2MDMwNzU5ZGTdcRwx2VLsHcyoY5sxSSSLb+S9jw=="></div>
+
+		<span class="box15"></span>
+		<div class="regist">
+			<h1>注册新用户</h1>
+			<div class="content_left">
+				<div class="tag clearfix">
+					<h2>选择注册方式：</h2>
+					<ul id="tags">
+
+						<li class="tb-email tb-email-select" onclick="TabChange('email');return false;">使用Email注册</li>
+						<li class="tb-phone" onclick="TabChange('phone');return false">使用手机号注册</li>
+					</ul>
+				</div>
+				<!--tag-->
+				<div class="infor clearfix">
+					<h2>填写您的信息：</h2>
+					<div class="email">
+						<ul id="v2regListInfo_bar">
+							<li id="liemail" class="v2reg_bg1" style="display: list-item;">
+								<label>Email地址：</label>
+								<div class="v2regListInfo_rtCont">
+									<input type="text" name="textfield" id="input_email" class="reginput_01">
+									<span class="box3" style="display: none;"></span>
+									<span class="v2reg_tips02" style="display: none;"></span>
+									<span class="box5" style="display: none;"></span>
+								</div>
+								<span class="Rclear"></span>
+							</li>
+							<li id="liphone" style="display: none;" class="v2reg_bg1">
+								<label>手机号码：</label>
+								<div class="v2regListInfo_rtCont" style="position:relative">
+									<input maxlength="11" type="text" name="textfield" id="input_phone" class="reginput_01">
+									<a href="#" class="asPhoneregBtn sprite_a">获取短信验证码</a>
+									<div class="v2regList_Btnimg" style="display:none">
+										<img align="absmiddle" src="https://ssl.vanclimg.com/login/loading.gif">正在发送...</div>
+									<div class="iFloatingwindow">
+										<p class="iFloatingIco">
+											<img src="https://ssl.vanclimg.com/login/regico.png"></p>
+										<dl>
+											<dd>
+												<p class="inviteTips_ft" style="width: auto">
+													<img src="https://ssl.vanclimg.com/login/inviteico.gif">请输入验证码！</p>
+											</dd>
+											<dd>
+												<img id="img_phonevalidate" src="/Controls/CalculateValidateCode.ashx?key=reg" width="145px" height="53px" style="cursor: pointer;"></dd>
+											<span class="clear"></span>
+											<p style="padding-left:63px;">
+												<span class="ftgry6">
+													<a class="grayft6" href="javascript:void(0)" style="cursor: pointer;">看不清？换一张</a>
+												</span>
+											</p>
+											<dd>
+												<input type="text" class="iFloatingInput" value="" id="input_phonevalidate"></dd>
+											<dd class="inviteTips_img">
+												<a href="javascript:void(0)">
+													<img src="https://ssl.vanclimg.com/login/inviteBtn.gif"></a>
+											</dd>
+										</dl>
+										<span class="clear"></span>
+									</div>
+									<span class="box3" style="display: none;"></span>
+									<span class="v2reg_tips02" style="display: none;"></span>
+									<span class="box5" style="display: none;"></span>
+
+								</div>
+								<span class="Rclear"></span>
+							</li>
+							<li id="liphonecode" style="display: none;" class="v2reg_bg1">
+								<label>填写手机验证码：</label>
+								<div class="v2regListInfo_rtCont">
+									<input type="text" name="textfield" id="input_phonecode" class="reginput_01" maxlength="6">
+									<span class="box3" style="display: none;"></span>
+									<span class="v2reg_tips02" style="display: none;"></span>
+									<span class="box5" style="display: none;"></span>
+								</div>
+								<span class="Rclear"></span>
+							</li>
+							<li class="v2reg_bg1">
+								<label>设定登录密码：</label>
+								<div class="v2regListInfo_rtCont">
+									<input maxlength="16" type="password" name="textfield" id="input_password" class="reginput_01">
+									<span class="box3" style="display: none;"></span>
+									<div class="v2reg_Safetyinfo" style="display: none;">
+										<span class="v2regfl">安全强度：</span>
+										<div class="v2regimg_03"></div>
+										<span class="v2reg_Class">高</span>
+									</div>
+									<span class="v2reg_tips02" style="display: none;"></span>
+									<span class="box5" style="display: none;"></span>
+								</div>
+								<span class="Rclear"></span>
+							</li>
+							<li class="v2reg_bg1">
+								<label>再次输入密码：</label>
+								<div class="v2regListInfo_rtCont">
+									<input maxlength="16" type="password" name="textfield" id="input_repassword" class="reginput_01">
+									<span class="box3" style="display: none;"></span>
+									<span class="v2reg_tips02" style="display: none;"></span>
+									<span class="box5" style="display: none;"></span>
+								</div>
+								<span class="Rclear"></span>
+							</li>
+							<li id="livalidatecode" style="height: 75px; display: list-item;" class="v2reg_bg1">
+								<label>验证码：</label>
+								<div class="v2regListInfo_rtCont">
+									<input maxlength="6" type="text" name="textfield" id="input_validatecode" class="reginput_02">
+									<img border="0" src="/Controls/CalculateValidateCode.ashx?key=reg" id="img_validatecode" style="cursor: pointer;">
+									<p class="FSVerification" style="cursor: pointer;">
+										看不清？
+										<br>
+										<a class="reda02" href="#">换一张</a>
+									</p>
+									<span class="box3" style="display: none;"></span>
+									<span class="v2reg_tips02" style="display: none;"></span>
+									<span class="box5" style="display: none;"></span>
+								</div>
+								<span class="Rclear"></span>
+							</li>
+							<li class="v2reg_bg1">
+								<div class="v2reg_bt">
+									<span>
+										请阅读
+										<a target="_blank" href="http://help.vancl.com/Category/69-1.html" class="reda10_ft12">《VANCL凡客诚品服务条款》</a>
+									</span>
+									<span class="box10"></span>
+									<a href="javascript:" onclick="$('#submitRegister').click();return false;">
+										<div id="submitRegister" class="submitStyle">同意以上条款并注册</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!--email-->
+				</div>
+				<!--infor-->
+			</div>
+			<!--content_left-->
+			<div class="content_right">
+				<p>
+					我已经注册，现在就
+					<a href="Login.aspx?http://shopping.vancl.com/mycart">登录</a>
+				</p>
+			</div>
+			<!--content_right-->
+			<div class="clear"></div>
+		</div>
+		<!--regist-->
+		<input name="hdn_RegisterType" id="hdn_RegisterType" type="hidden" value="email">
+		<input name="hdn_ResourceHref" id="hdn_ResourceHref_name" type="hidden" value="http://shopping.vancl.com/mycart">
+
+		<!--wrapper-->
+	</form>
+
+	<!--bottom-->
+	<center>
+
+		<div id="bottom" align="center">
+			<div id="bottoms">
+				<p class="bZp3">
+					Copyright 2007 - 2014 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11010102000579号 出版物经营许可证新出发京批字第直110138号
+				</p>
+				<div id="footerArea">
+					<div class="subFooter">
+						<a rel="nofollow" href="https://search.szfw.org/cert/l/CX20111229001302001330" class="redLogo" target="_blank"></a>
+						<span class="costumeOrg"></span>
+						<a rel="nofollow" href="http://www.315online.com.cn/member/315090053.html" class="wsjyBzzx" target="_blank"></a>
+						<a rel="nofollow" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202010081900017" class="vanclMsg" target="_blank"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</center>
+	<!--javascript-->
+
+	<script type="text/JavaScript" src="https://js.vancl.com/js.ashx?href=[/login/reg.js]&amp;v=66630327&amp;compress" language="javascript"></script>
+
+	<script type="text/javascript" language="javascript" src="//js.vanclimg.com/js.ashx?href=[public/union_websource.js]&amp;compress"></script>
+
+</body>
+</html>

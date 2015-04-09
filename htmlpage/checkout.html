@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>checkout</title>
+	<link rel="stylesheet" type="text/css" href="css/checkout.css">
+		<link rel="stylesheet" type="text/css" href="css/checkout1.css">
+	</head>
+<body class="checkout">
+	<div id="wrapper">
+		<div id="header" class="clearfix">
+			<a class="logo" href="http://www.vancl.com/" title="凡客诚品" target="_blank">
+				<img alt="凡客诚品" src="http://i2.vanclimg.com/cms/20140829/vancl-logo.png"></a>
+			<div class="help-center">
+				<a href="http://help.vancl.com/" target="_blank">帮助中心</a>
+			</div>
+			<div class="account">
+				<p>
+					您好，
+					<span class="username">1396*****35</span>
+					<a class="logout" href="https://login.vancl.com/login/userloginout.aspx">退出登录</a>
+					|
+					<a class="switch" href="https://login.vancl.com/login/login.aspx?http://shopping.vancl.com/mycart">更换用户</a>
+				</p>
+
+			</div>
+		</div>
+		<div id="location">
+
+			<span>
+				<a href="http://shopping.vancl.com/mycart">1.我的购物车</a>
+			</span> <em>2.填写核对信息单</em>
+			<span>3.成功提交订单</span>
+
+		</div>
+		<div id="content">
+
+			<div class="wrapper clearfix">
+				<section class="order-info">
+					<div id="addr" class="addr">
+						<div class="addr-hd inland-addr-hd clearfix">
+
+							<h3 class="addr-title">收货地址：</h3>
+							<a href="/checkout/ShowAddress?Isforeign=false" class="oprate close-addr track" name="sp_cart_address_close">[不保存并关闭]</a>
+						</div>
+						<section class="inland-addr">
+							<form id="modify-addr-form" action="/checkout/setaddress">
+								<input type="hidden" name="isForeign" value="false">
+								<div class="addr-list">
+									<table>
+										<tbody>
+											<tr class="addr-selected">
+												<td class="choose">
+													<input class="fix-ckb-radio" type="radio" name="AddressId" value="48123474" checked=""></td>
+												<td class="addr-detail">
+													<div class="addr-lang-option-edit">
+														浙江-杭州市-富阳市-凤浦路159号 301室
+														<span>311400</span>
+														<span>（华凌锋  收）</span>
+														<span>13967172035</span>
+													</div>
+
+												</td>
+												<td class="addr-set-default">
+													<a href="/checkout/SetDefaultInlandAddress?addressid=48123474&amp;isforeign=false" class="set-user-def oprate track" name="sp_cart_address_set_for_default_address" style="display: none;">设置为默认收货地址</a>
+												</td>
+												<td class="oprate">
+													<a id="address_edit_48123474" data-addressid="48123474" href="/checkout/ShowEditAddress?addressid=48123474&amp;isforeign=false" class="addr-edit oprate track" name="sp_cart_address_edit" style="display: none;">编辑</a>
+													<a id="address_canceledit_48123474" data-addressid="48123474" href="javascript:;" class="list_inland-cancel-edit" style="display:none;">取消编辑</a>
+												</td>
+											</tr>
+											<tr class="edit-addr-panel">
+												<td></td>
+												<td colspan="3"></td>
+
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+								<div class="add-addr-panel">
+									<input class="fix-ckb-radio" id="add-addr" name="AddressId" type="radio" value="0" data-url="/checkout/showaddaddress?isforeign=false">
+									<label for="add-addr">添加新地址</label>
+								</div>
+								<input type="submit" class="save-addr track" name="sp_cart_address_save" value=""></form>
+							<div class="addr-form"></div>
+						</section>
+					</div>
+					<div id="delivery" class="delivery">
+						<h3 class="delivery-title">配送方式：</h3>
+						<span class="side-error">[请重新编辑配送方式]</span>
+						<span class="clear"></span>
+						<section>
+							<form id="delivery-form" action="/checkout/setdelivery">
+								<ol class="choose-delivery">
+									<li class="delivery-way">
+										<h4>送货方式：</h4>
+									</li>
+									<li class="delivery-way-items">
+										<input id="transferId-01" type="radio" class="delivery-radio" name="transferId" value="01" checked="checked">
+										<label for="transferId-01" class="delivery-item">快递</label>
+										<a href="http://help.vancl.com/category/transfer" target="_blank" class="oprate">查看货到付款配送范围</a>
+
+										<span class="error">请选择送货方式</span>
+									</li>
+									<li class="delivery-divide"></li>
+									<li class="delivery-time-title">
+										<h4>送货时间：</h4>
+									</li>
+									<li class="delivery-time-items">
+										<div>
+											<input type="radio" name="transferTime" value="Working">
+											<label for="Working">周一至周五、工作日送货</label>
+											<span class="error">请选择送货时间</span>
+										</div>
+										<div>
+											<input type="radio" name="transferTime" value="Weekend">
+											<label for="Weekend">周六、周日、假日送货</label>
+										</div>
+										<div>
+											<input type="radio" name="transferTime" value="AnyTime">
+											<label for="AnyTime">周一至周日、假日均可送货</label>
+										</div>
+										<div>
+											<input type="radio" name="transferTime" value="Special">
+											<label for="Special">校园配送（特别安排可能超出预计送货天数）</label>
+										</div>
+									</li>
+									<li class="save-delivery-panel">
+										<input type="submit" name="sp_cart_delivery_save" class="save-delivery track" value=""></li>
+									<li class="delivery-explanation clearfix"> <em>声明：</em>
+										<div>
+											<p>1.&nbsp;送货时间：早 8:30至 晚7:30</p>
+											2.&nbsp;我们会努力按照您选择的时间进行配送，但因天气、交通等因素影响，您的订单有可能会有延误现象，请您谅解！
+										</div>
+									</li>
+								</ol>
+							</form>
+						</section>
+					</div>
+					<div id="pay" class="pay">
+						<div class="pay-hd clearfix">
+							<h3 class="pay-title">支付方式：</h3>
+						</div>
+
+						<span class="no-addr-or-delivery-error">请先确认“收货地址”或“配送方式”</span>
+					</div>
+					<div id="gift-card" class="gift-card">
+						<div class="gift-card-hd clearfix">
+							<h3 class="gift-card-title">使用礼品卡：</h3>
+						</div>
+						<span class="no-addr-or-delivery-error">请先确认“收货地址”或“配送方式”</span>
+					</div>
+					<div id="virtual-account" class="virtual-account">
+						<section></section>
+
+					</div>
+				</section>
+				<div id="order-info-panel">
+					<div id="all-tips" data-tips=""></div>
+					<!--订单显示-->
+					<form method="post" action="/checkout/save" name="Myform" id="submit-order-form">
+						<div class="order-info-head">
+							<h3 class="clearfix">
+								<span class="order-list-title">商品清单</span>
+								<a name="sp_cart_gift_back_cart" class="back2cart track" href="http://shopping.vancl.com/mycart">回到购物车，修改产品&gt;&gt;</a>
+
+							</h3>
+						</div>
+
+						<h5 class="order-list-head">
+							订单1
+							<span class="store-house-info">
+								将从
+								<em>上海二库</em>
+								发出，预计发货后
+								<em>2天</em>
+								内送达
+							</span>
+						</h5>
+						<div class="order-list clearfix">
+							<div class="order-list-shop">
+								店铺:
+								<span class="store-house-shop">
+									<a href="http://mall.vancl.com/10258/">VANCL 凡客诚品旗舰店</a>
+								</span>
+							</div>
+							<table>
+								<thead>
+									<tr>
+										<th>商品名称</th>
+										<th>尺码</th>
+										<th>赠送积分</th>
+										<th>单价</th>
+										<th>数量</th>
+										<th>优惠</th>
+										<th>小计</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="name">
+											<a target="_blank" href="http://item.vancl.com/2810452.html?ref=zt_outdoor-9471-0-0|hp-hp-yc-1_1-v:n">凡客冲锋衣 3D轻量 男款 深灰色</a>
+										</td>
+										<td class="size">XL</td>
+										<td class="point">
+											249
+                                    分
+										</td>
+										<td class="price">￥499.00</td>
+										<td class="qty">1</td>
+										<td class="preferential">
+											<div class="discount-cx">-</div>
+										</td>
+										<td class="sub-total">￥499.00</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="order-amount">
+								商品金额小计:
+								<span>￥499.00</span>
+								&nbsp;&nbsp;+&nbsp;&nbsp;运费:
+								<span>￥0.00</span>
+								&nbsp;&nbsp;=&nbsp;&nbsp;应付:
+								<em>￥499.00</em>
+							</div>
+						</div>
+						<ul class="all-amount">
+
+							<li>
+								<em>您共需要为订单支付：
+									<label id="price-total" data-price-total="499.00">￥499.00</label></em> 
+							</li>
+						</ul>
+
+						<div class="additional-info">
+							<h4 class="collapse">订单备注</h4>
+							<div class="additional-info-content">
+
+								<div>
+									<textarea id="comments" name="comments" class="place-holder" placeholder="此处请勿填写有关配送、支付等方面的信息。留言请在50字以内"></textarea>
+									<p class="error"></p>
+								</div>
+							</div>
+							<h4 class="collapse">开发票</h4>
+							<div class="additional-info-content">
+								<h5>
+									您需要开具发票吗？
+									<input type="radio" id="IsInvoicePositive" name="requireInvoice" value="true">
+									<label for="IsInvoicePositive">是</label>
+									<input type="radio" id="IsInvoiceNegative" name="requireInvoice" checked="checked" value="false">
+									<label for="IsInvoiceNegative">否</label>
+								</h5>
+								<div class="additional-info-detail invoice-content">
+									<span>*</span>
+									<label for="InvoiceCustom">客 户 类 型：</label>
+									<select id="InvoiceCustom" name="InvoiceCustom" disabled="disabled">
+										<option value="Personal">个人</option>
+										<option value="Company">公司</option>
+										<option value="IndividualBusiness">个体工商户</option>
+										<option value="Foreign">外籍</option>
+										<option value="Hkmotw">港、澳、台</option>
+									</select>
+								</div>
+								<div class="additional-info-detail clearfix">
+									<div>
+										<span>*</span>
+										发 票 抬 头：
+									</div>
+									<div>
+										<input id="InvoiceTitle" class="invoice-title" type="text" name="invoicetitle" disabled="disabled" maxlength="50">
+										<input id="InvoiceTitlePerson" class="invoice-title-person" type="text" name="invoicetitle" maxlength="50" disabled="disabled" value="个人">
+										<p class="error"></p>
+									</div>
+								</div>
+								<div class="additional-info-detail invoice-content">
+									<span>*</span>
+									<label for="InvoiceContent">发 票 内 容：</label>
+									<select id="invoiceContent" name="InvoiceContent" disabled="disabled">
+										<option value="Clothes">服装</option>
+										<option value="Shoes">鞋</option>
+										<option value="Household">家居</option>
+										<option value="Accessories">配饰</option>
+										<option value="Cosmetics">化妆品</option>
+										<option value="Electrical">家电</option>
+										<option value="Bags">箱包</option>
+										<option value="Details">明细</option>
+									</select>
+								</div>
+								<div id="invoice-tax" class="additional-info-detail clearfix">
+									<div class="invoice-tax">税务登记号：</div>
+									<div>
+										<input id="InvoiceTaxNo" class="invoice-title" type="text" name="InvoiceTaxNo" disabled="disabled" maxlength="20">
+										<p class="error"></p>
+									</div>
+								</div>
+							</div>
+							<input type="hidden" name="requireedm" value="true"></div>
+						<div class="order-submit clearfix">
+							<input type="submit" id="submit-order-btn" value="提交订单" class="submit-order-btn track" name="sp_cart_submit_order">
+							<span class="warn oprate"></span>
+						</div>
+						<!--特惠品移除提示-->
+					</form>
+				</div>
+			</div>
+			<script type="text/javascript">
+    $(document).ready(function () {
+        $("#province-id option").each(function () {
+            var valContent = decodeURI($(this).val());
+            if (valContent == "澳门特别行政区" || valContent == "香港特别行政区" || valContent == "台湾省") {
+                $(this).remove();
+            }
+        });
+    });
+</script>
+		</div>
+		<div id="footer">
+			<p class="copyrights">
+				Copyright 2007 - 2015 vancl.com All Rights Reserved 京ICP证100557号 京公网安备11010102000579号 出版物经营许可证新出发京批字第直110138号
+			</p>
+		</div>
+	</div>
+
+	<!--[if ie 6]>
+	<script type="text/javascript" src="//js.vancl.com/js.ashx?href=/shopping/jquery/jquery.bgiframe.min.js&compress"></script>
+	<![endif]-->
+
+	<img id="weblog_track" src="https://vamr.vancl.com/track.aspx?ref=http%3A//shopping.vancl.com/mycart&amp;areaid=sp_cart_address_modify" style="display:none;"></body>
+</html>

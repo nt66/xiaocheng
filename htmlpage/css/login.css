@@ -1,0 +1,520 @@
+body, html {
+	padding: 0;
+	margin: 0 auto;
+	background-color: #FFF;
+}
+img {
+	border: none;
+}
+h1, h2, h3, h4, h5, h6, hr, blockquote, form, ul, ol, li, p, pre, dl, dt, dd, fieldset, legend, button, input, textarea, th, td {
+	padding: 0;
+	margin: 0;
+}
+ul, ol, li {
+	list-style: none;
+}
+sup {
+	vertical-align: text-top;
+}
+sub {
+	vertical-align: text-bottom;
+}
+legend {
+	color: #000;
+}
+fieldset {
+	border: 0;
+}
+button, input, select, textarea {
+	font-size: 100%;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.clear {
+	clear: both;
+	line-height: 0px;
+	font-size: 0px;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+	overflow: hidden;
+}
+.left {
+	float: left;
+	_display: inline;
+}
+.right {
+	float: right;
+}
+.hr_10 {
+	clear: both;
+	height: 10px;
+	overflow: hidden;
+	font-size: 1px;
+	line-height: 1px;
+}
+body, button, input, select, textarea {
+	font-family: "宋体";
+	color: #000;
+	font-size: 12px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+}
+address, cite, dfn, em, var {
+	font-style: normal
+}
+code, kbd, pre, samp {
+	font-family: courier new, courier, monospace;
+}
+.bold {
+	font-weight: bold;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	color: #CC0000;
+	text-decoration: underline;
+}
+a, area {
+	blr: expression(this.onFocus=this.blur());
+}
+:focus {
+	-moz-outline-style: none;
+}
+.topMargin5 {
+	margin-top: 5px;
+}
+.topMargin10 {
+	margin-top: 10px;
+}
+.topMargin15 {
+	margin-top: 15px;
+}
+.topMargin20 {
+	margin-top: 20px;
+}
+.leftMargin5 {
+	margin-left: 5px;
+}
+.leftMargin10 {
+	margin-left: 10px;
+}
+.wrapper {
+	width: 800px;
+	border-bottom: 1px solid #999;
+	margin: 30px auto 10px;
+}
+.login {
+	width: 312px;
+	border: 1px solid #D1D1D1;
+	background-color: #FAFAFA;
+	float: left;
+	margin-top: 18px;
+	margin-bottom: 20px;
+}
+.tag {
+	width: 312px;
+	height: 26px;
+	line-height: 26px;
+	border-bottom: 1px solid #A10000;
+}
+.tag li {
+	width: 156px;
+	height: 26px;
+	line-height: 26px;
+	float: left;
+	text-align: center;
+	background: url(https://ssl.vanclimg.com/cms/20140829/login_spritesbg.png)  0 -690px repeat-x;
+	color: #656565;
+	cursor: pointer;
+}
+.tag li.on {
+	width: 156px;
+	height: 26px;
+	line-height: 26px;
+	float: left;
+	text-align: center;
+	background: url(https://ssl.vanclimg.com/cms/20140829/login_spritesbg.png) -116px -662px no-repeat;
+	color: #fff;
+}
+.user_infor {
+	width: 252px;
+	padding: 10px 30px 10px;
+}
+.tips {
+	clear: both;
+	width: 220px;
+	min-height: 16px;
+	line-height: 16px;
+	color: #A10000;
+	text-indent: 30px;
+	background: url(https://ssl.vanclimg.com/cms/20140829/login_spritesbg.png) -351px -662px no-repeat;
+	background-color: #FFF6F7;
+	border: 1px solid #CC9998;
+	margin-left: 48px;
+	display: block;
+	visibility: hidden;
+}
+.user_infor {
+	width: 272px;
+	padding: 10px 20px 10px;
+}
+.user_infor p {
+	padding: 2px 0;
+}
+.user_infor p label {
+	color: #656565;
+}
+.user_infor p input {
+	width: 220px;
+	height: 28px;
+	line-height: 28px;
+	border: 1px solid #A5AFC3;
+	text-indent: 5px;
+	color: #999999;
+	vertical-align: middle;
+}
+.bt {
+	padding: 2px 0 15px 48px;
+}
+.bt a.log {
+	display: block;
+	width: 97px;
+	height: 27px;
+	line-height: 27px;
+	color: #fff;
+	text-align: center;
+	background: url(https://ssl.vanclimg.com/cms/20140829/login_spritesbg.png) 0 -662px no-repeat;
+	float: left;
+	margin-right: 5px;
+}
+.bt a.loading {
+	display: block;
+	width: 97px;
+	height: 27px;
+	line-height: 27px;
+	padding-top: 0px;
+	color: #656565;
+	text-align: center;
+	background: url(https://ssl.vanclimg.com/login/bt2.jpg) center no-repeat;
+	float: left;
+	margin-right: 5px;
+}
+.bt a.loading img {
+	vertical-align: middle;
+}
+.bt a.log:hover {
+	text-decoration: none;
+	font-weight: 700;
+}
+.bt a.forget {
+	line-height: 30px;
+	display: inline;
+}
+.tishi {
+	line-height: 24px;
+	color: #656565;
+	padding-left: 10px;
+}
+.tishi span {
+	color: #A10000;
+}
+.tishi a:link, .tishi a:visited {
+	display: inline-block;
+	width: 61px;
+	height: 19px;
+	line-height: 19px;
+	color: #fff;
+	text-align: center;
+	background: url(https://ssl.vanclimg.com/cms/20140829/login_spritesbg.png) -284px -662px no-repeat;
+	margin-left: 5px;
+}
+.tishi a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+.advert {
+	float: left;
+	width: auto;
+	height: auto;
+	+margin-bottom: -3px;
+}
+.user_infor p input.inputtextcolor {
+	color: #000;
+}
+#Head {
+	margin-top: 15px;
+}
+#Head .logo:link, .logo:visited, .logo:hover {
+	background: url("https://ssl.vanclimg.com/cms/20140829/login_spritesbg.png") no-repeat scroll 0 -622px transparent;
+	display: inline-block;
+	height: 39px;
+	width: 311px;
+}
+#Head p {
+	float: right;
+	margin: 0 5px;
+}
+.subFooter {
+	margin-bottom: 25px;
+	text-align: center;
+}
+#footerArea .redLogo:link, #footerArea .redLogo:visited, #footerArea .redLogo:hover {
+	background: url("https://ssl.vanclimg.com/cms/20140829/login_spritesbg.png") no-repeat scroll 0 -400px transparent;
+	display: inline-block;
+	height: 42px;
+	width: 113px;
+}
+#footerArea .subFooter a, #footerArea .subFooter span {
+	margin: 0 10px;
+}
+#footerArea .costumeOrg {
+	background: url("https://ssl.vanclimg.com/cms/20140829/login_spritesbg.png") no-repeat scroll 0 -448px transparent;
+	display: inline-block;
+	height: 45px;
+	width: 156px;
+}
+#footerArea .wsjyBzzx:link, #footerArea .wsjyBzzx:visited, #footerArea .wsjyBzzx:hover {
+	background: url("https://ssl.vanclimg.com/cms/20140829/login_spritesbg.png") no-repeat scroll 0 -494px transparent;
+	display: inline-block;
+	height: 42px;
+	width: 96px;
+}
+#footerArea .vanclMsg:link, #footerArea .vanclMsg:visited, #footerArea .vanclMsg:hover {
+	background: url("https://ssl.vanclimg.com/cms/20140829/login_spritesbg.png") no-repeat scroll -97px -494px transparent;
+	display: inline-block;
+	height: 42px;
+	width: 101px;
+}
+.blank10 {
+	clear: both;
+	display: block;
+	font-size: 1px;
+	overflow: hidden;
+	height: 10px;
+}
+.glup {
+	width: 270px;
+	height: 80px;
+	padding-left: 10px;
+	border-top: 1px dotted #acacac;
+}
+.hezuo {
+	color: #333333;
+	line-height: 12px;
+	font-weight: normal
+}
+.qkimg a {
+	display: block;
+	width: 52px;
+	height: 20px;
+	float: left;
+	background: url(https://ssl.vanclimg.com/cms/20140307/glbg.png) no-repeat scroll 0px -192px;
+	margin-bottom: 5px;
+	margin-right: 18px;
+}
+.qkimg .qkimg01 {
+	width: 31px;
+	background: url(https://ssl.vanclimg.com/cms/20140307/glbg.png) no-repeat scroll -62px -192px;
+}
+.qkimg .qkimg02 {
+	width: 68px;
+	background: url(https://ssl.vanclimg.com/cms/20140307/glbg.png) no-repeat scroll -102px -192px;
+}
+.qkimg .qkimg03 {
+	width: 40px;
+	background: url(https://ssl.vanclimg.com/cms/20140307/glbg.png) no-repeat scroll -178px -192px;
+}
+.qkimg .qkimg04 {
+	width: 37px;
+	background: url(https://ssl.vanclimg.com/cms/20140307/glbg.png) no-repeat scroll -225px -192px;
+}
+.qkimg .qkimg05 {
+	width: 42px;
+	background: url(https://ssl.vanclimg.com/cms/20140307/glbg.png) no-repeat scroll -269px -192px rgba(0, 0, 0, 0);
+}
+#bottom {
+	width: 980px;
+	display: inline-table;
+	font: 100 12px "宋体";
+	color: #999999;
+	padding-top: 15px;
+}
+#bottom {
+	font: 100 12px "宋体";
+	color: #999999;
+	position: relative;
+	width: 980px;
+	margin: 0px auto;
+}
+#bottom a:link {
+	text-decoration: none;
+	color: #333333;
+}
+#bottom a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+#bottom a:hover {
+	text-decoration: none;
+	color: #a10000;
+}
+#bottom {
+	width: 980px;
+	display: inline-table;
+}
+#bottom #helpIntro {
+	width: 980px;
+	border-top: 1px solid #9F0306;
+	border-bottom: 1px solid #9F0306;
+	padding: 20px 0 30px 0;
+	*padding: 20px 0;
+	margin: 20px 0;
+	height: 77px;
+	clear: left;
+}
+#bottom #helpIntro dl {
+	float: left;
+	border-right: 1px solid #CCCCCC;
+	height: 87px;
+	*height: 77px;
+	_height: 87px;
+	padding: 0 27px 0 27px;
+	margin: 0;
+	overflow: hidden;
+}
+#bottom #helpIntro .Nosty {
+	border-right: none;
+}
+#bottom #helpIntro dl dt {
+	margin: 0px 0px 14px 0px;
+}
+#bottom #helpIntro dl dd {
+	list-style: none;
+	margin: 0 12px 8px 0;
+	padding: 0
+}
+#bottom #helpIntro .helpLeft {
+	float: left;
+	border-right: 1px solid #CCCCCC;
+	height: 87px;
+	height: 77px;
+	_height: 87px;
+	padding: 0 27px 0 0px;
+}
+#bottoms p {
+	margin: 10px 0;
+	padding: 5px 0;
+}
+#bottoms .bZp {
+	height: 55px;
+	_height: 53px;
+	width: 980px
+}
+#bottoms p {
+}
+#bottoms .about {
+	margin: 0 0 10px;
+	margin: 0 0 8px;
+	padding: 0;
+	width: 980px
+}
+#bottoms .bZp2 {
+	margin: 0 0 20px 0;
+	padding: 0;
+	width: 980px
+}
+#bottoms .bZp2 img {
+	margin-right: 20px;
+}
+#bottoms .bZp3 {
+	margin: 0 0 20px 0;
+	padding: 0;
+	_margin: 0 0 17px 0;
+	width: 980px
+}
+.wdSty {
+	color: #a10000;
+	font: bold 14px "宋体";
+}
+.wdSty2 {
+	color: #000000;
+}
+#bottom #helpIntro .Nosty {
+	padding: 5px 0 5px 25px;
+	width: 160px;
+}
+#bottom #helpIntro .Nosty dd {
+	padding: 0;
+	margin: 0  0 0 10px
+}
+#Head, #Bottom {
+	width: 800px;
+	font-size: 12px;
+	color: #333333;
+}
+#Head {
+	border-bottom: 1px solid #7a7f89;
+	height: 40px !important;
+	height: 39px;
+}
+#Head img {
+	float: left;
+}
+#Head p {
+	margin-top: 20px;
+}
+#Head img {
+	margin-right: 458px;
+}
+#Bottom {
+	clear: both;
+}
+#Bottom p {
+	margin: 0;
+	clear: left;
+	width: 100%;
+}
+#Bottom p .sty01 {
+	margin-right: 20px;
+}
+#Bottom .sty02 {
+	color: #999999;
+	margin: 14px 0 19px 0;
+}
+.shoppingstepcontrol {
+	color: #a10000;
+	font-weight: bolder;
+}
+#bottom {
+	width: 980px;
+	display: inline-table;
+	font: 100 12px "宋体";
+	color: #999999;
+}
+#step_ {
+	font-size: 12px;
+	width: 800px;
+	padding-top: 17px;
+	color: #999999;
+}
+.blank0 {
+	clear: both;
+	display: block;
+	font-size: 1px;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+}
