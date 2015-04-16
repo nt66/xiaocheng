@@ -11,13 +11,18 @@ mongoose.connection.on('connected',function () {
 });
 
 //连接失败
-mongoose.connection.on('error',function () {
-	console.log('mongoose connected error:'+dbPath);
+mongoose.connection.on('error',function (err) {
+	console.log('mongoose connected error:'+err);
 });
 
 var userSchema = new Schema({
 	name:String,
 	pwd:String
+});
+
+//静态方法注册
+userSchema.static('findByName', function (name, callback) {
+  return this.find({ name: name }, callback);
 });
 
 var userModel = mongoose.model('user', userSchema,'user');//最后一个参数是你想要保存的集合名,默认是复数
@@ -31,11 +36,14 @@ function User(user){
 
 User.get=function(name,callback){
 	//姓名查找
-	userModel.findByName('david',function(err,doc) {
+	userModel.findByName(name,function(err,doc){
+		console.log(doc[0]);
 		if(err)
 			return callback(err);
 		else
-			return callback(doc.name,doc.pwd);
+			return callback(null,doc[0]);
 	});
-	return callback('无法找到该用户');
 }
+
+module.exports = User;
+

@@ -11,9 +11,16 @@ router.get('/login.html', function(req, res, next){
 //提交
 router.post('/login.html',function(req,res) {
   	var pwd = req.body.loginPwd; //crypto.createHash('md5').update(req.body.loginPwd).digest('hex');
-	User.get(req.body.loginName,function(err,user){
+  	var name = req.body.loginName;
+  	//console.log(name+','+pwd);
+	User.get(name,function(err,user){
 		if(err)	res.send(err);
-		if(user.pwd != pwd || user.length == 0) res.render('login',{validate:'用户名或密码错误'});
+		if(user.pwd != pwd || user.length == 0) {
+			res.render('login',{validate:'用户名或密码错误'});
+		}
+		else{
+			res.send('登陆成功!');
+		}
 	});
 });
 module.exports = router;
