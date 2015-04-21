@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%=title%></title>
+	<script type="text/javascript" src="/javascripts/jquery-1.11.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/reg.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/reg2.css">
+</head>
+<body id="body" class="wrapper">
+	<div id="top" style="padding: 20px 0 0 0;">
+		<img src="" alt="" title="" onclick="" style="cursor:pointer"></div>
+	<!--logo-->
+
+	<form method="post" id="myform">
+		<div class="aspNetHidden">
+			<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value=""></div>
+		<span class="box15"></span>
+		<div class="regist">
+			<h1>注册新用户</h1>
+			<div class="content_left">
+				<div class="tag clearfix">
+					<h2>选择注册方式：</h2>
+					<ul id="tags">
+						<li class="tb-email tb-email-select" onclick="TabChange('email');return false;">使用Email注册</li>
+					</ul>
+				</div>
+				<!--tag-->
+				<div class="infor clearfix">
+					<h2>填写您的信息：</h2>
+					<div class="email">
+						<ul id="v2regListInfo_bar">
+							<li id="liemail" class="v2reg_bg1" style="display: list-item;">
+								<label>Email地址：</label>
+								<div class="v2regListInfo_rtCont">
+									<input type="text" name="loginName" id="input_email" class="reginput_01">
+									<span class="box3" style="display: none;"></span>
+									<span class="v2reg_tips02" style="display: none;"></span>
+									<span class="box5" style="display: none;"></span>
+								</div>
+								<span class="Rclear"></span>
+							</li>
+							<li class="v2reg_bg1">
+								<label>设定登录密码：</label>
+								<div class="v2regListInfo_rtCont">
+									<input maxlength="16" type="password" name="loginPwd" id="input_password" class="reginput_01">
+									<span class="box3" style="display: none;"></span>
+									<div class="v2reg_Safetyinfo" style="display: none;">
+										<span class="v2regfl">安全强度：</span>
+										<div class="v2regimg_03"></div>
+										<span class="v2reg_Class">高</span>
+									</div>
+									<span class="v2reg_tips02" style="display: none;"></span>
+									<span class="box5" style="display: none;"></span>
+								</div>
+								<span class="Rclear"></span>
+							</li>
+							<li class="v2reg_bg1">
+								<label>再次输入密码：</label>
+								<div class="v2regListInfo_rtCont">
+									<input maxlength="16" type="password" name="loginPwd2" id="input_repassword" class="reginput_01">
+									<span class="box3" style="display: none;"></span>
+									<span class="v2reg_tips02" style="display: none;"></span>
+									<span class="box5" style="display: none;"></span>
+								</div>
+								<span class="Rclear"></span>
+							</li>
+							<li id="livalidatecode" style="height: 75px; display: list-item;" class="v2reg_bg1">
+								<label>验证码：</label>
+								<div class="v2regListInfo_rtCont">
+									<input maxlength="6" type="text" name="textfield" id="input_validatecode" class="reginput_02">
+									<img border="0" src="" id="img_validatecode" style="cursor: pointer;">
+									<p class="FSVerification" style="cursor: pointer;">
+										看不清？
+										<br>
+										<a class="reda02" href="#">换一张</a>
+									</p>
+									<span class="box3" style="display: none;"></span>
+									<span class="v2reg_tips02" style="display: none;"></span>
+									<span class="box5" style="display: none;"></span>
+								</div>
+								<span class="Rclear"></span>
+							</li>
+							<li class="v2reg_bg1">
+								<div class="v2reg_bt">
+									<span>
+										请阅读
+										<a target="_blank" href="" class="reda10_ft12">《小橙时尚服务条款》</a>
+									</span>
+									<span class="box10"></span>
+									<a href="javascript:void(0)" name="submit">
+										<div id="submitRegister" class="submitStyle">同意以上条款并注册</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!--email-->
+				</div>
+				<!--infor-->
+			</div>
+			<!--content_left-->
+			<div class="content_right">
+				<p>
+					我已经注册，现在就
+					<a href="Login.aspx?http://shopping.vancl.com/mycart">登录</a>
+				</p>
+			</div>
+			<!--content_right-->
+			<div class="clear"></div>
+		</div>
+		<!--regist-->
+		<input name="hdn_RegisterType" id="hdn_RegisterType" type="hidden" value="email">
+		<input name="hdn_ResourceHref" id="hdn_ResourceHref_name" type="hidden" value="http://shopping.vancl.com/mycart">
+
+		<!--wrapper-->
+	</form>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#submitRegister').click(function(){
+			$('#myform').submit();
+		})
+	});
+
+</script>
+</body>
+</html>
