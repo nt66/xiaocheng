@@ -18,4 +18,15 @@ router.get('/main.html', function(req, res, next) {
         res.render('main',{userName:''});
 });
 
+/* filter page. */
+router.get('/filter.html', function(req, res) {
+	var user = req.session.user;
+    if (user)
+        res.render('filter', {
+            userName: user.name
+        });
+    else
+        res.render('filter',{userName:''});
+});
+
 module.exports = router;

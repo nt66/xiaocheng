@@ -1,4 +1,3 @@
-var crypto = require('crypto');
 var mongoose = require('mongoose');
 var dbPath = 'mongodb://localhost/xiaocheng';
 var Schema = mongoose.Schema;
